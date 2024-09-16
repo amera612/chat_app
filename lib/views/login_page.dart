@@ -53,10 +53,14 @@ class LoginPage extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const RegisterPage();
-                    }));
+                    //💁🏻‍♀️💁🏻‍♀️to navigat with pushnamed 🫵🫵
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) {
+                    //   return const RegisterPage();
+                    // },
+                    // ),
+                    // );
+                    Navigator.pushNamed(context, 'registerPage');
                   },
                   child: const Text(
                     'Sign Up',
