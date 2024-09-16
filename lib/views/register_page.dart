@@ -1,15 +1,14 @@
-import 'package:chat_app/views/register_page.dart';
+import 'package:chat_app/views/login_page.dart';
 import 'package:chat_app/widget/custom_button.dart';
-import 'package:chat_app/widget/custom_textfield.dart';
+import 'package:chat_app/widget/custom_textField.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
       backgroundColor: const Color(0xff2B475E),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12.0),
@@ -30,23 +29,20 @@ class LoginPage extends StatelessWidget {
               children: [
                 Text(
                   textAlign: TextAlign.start,
-                  'Sign in',
-                  style: TextStyle(
-                      fontSize: 22,
-                      color: Colors.white,
-                      //fontFamily: 'Pacifico',
-                      height: 3),
+                  'Sign Up',
+                  style:
+                      TextStyle(fontSize: 22, color: Colors.white, height: 3),
                 ),
               ],
             ),
             CustomTextField(hintText: 'Email'),
             CustomTextField(hintText: 'Passward'),
-            CustomButton(buttonText: 'LOGIN'),
+            CustomButton(buttonText: 'REGISTER'),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Don\'t have an account ?  ',
+                  'already have an account ?  ',
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -55,11 +51,11 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return const RegisterPage();
+                      return const LoginPage();
                     }));
                   },
                   child: const Text(
-                    'Sign Up',
+                    'login',
                     style: TextStyle(
                       color: Color(0xffC7EDE6),
                     ),
@@ -71,6 +67,6 @@ class LoginPage extends StatelessWidget {
           ],
         ),
       ),
-    ));
+    );
   }
 }
